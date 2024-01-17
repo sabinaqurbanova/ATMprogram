@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace ATMprogram.UI
 {
@@ -39,7 +34,7 @@ namespace ATMprogram.UI
                         return default;
                     }
                 }
-                catch(Exception error)
+                catch (Exception error)
                 {
                     Utility.PrintMessage($"Invalid input. Error message: \"{error.Message}\". Try again.", false);
                 }

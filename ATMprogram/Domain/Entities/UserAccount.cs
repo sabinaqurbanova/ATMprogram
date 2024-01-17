@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ATMprogram.Domain.Entities
+﻿namespace ATMprogram.Domain.Entities
 {
     public class UserAccount
     {
@@ -16,6 +10,5 @@ namespace ATMprogram.Domain.Entities
         public decimal AccountBalance { get; set; }
         public int TotalLogin { get; set; }
         public bool IsLocked { get; set; }
-
     }
 }

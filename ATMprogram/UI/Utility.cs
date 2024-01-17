@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using System.Globalization;
 
 namespace ATMprogram.UI
 {
     public static class Utility
     {
-        private static long tranId;
-     
-        private static CultureInfo culture = new CultureInfo("Lt-az-AZ");
+        private static long _transactionId;
+        private static readonly CultureInfo culture = new CultureInfo("Lt-az-AZ");
 
+        #region Utility
         public static long GettransactionId()
         {
-            return ++tranId;
+            return ++_transactionId;
         }
 
         public static string GetSecretInput(string prompt)
@@ -87,7 +83,7 @@ namespace ATMprogram.UI
         }
 
         public static void PrintDotAnimation(int timer = 10)
-        { 
+        {
             for (int i = 0; i < timer; i++)
             {
                 Console.Write(".");
@@ -100,7 +96,6 @@ namespace ATMprogram.UI
         {
             return String.Format(culture, "{0:C3}", amt);
         }
-
-      
+        #endregion Utility
     }
 }

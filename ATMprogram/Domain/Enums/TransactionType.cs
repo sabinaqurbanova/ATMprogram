@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ATMprogram.Domain.Enums
+﻿namespace ATMprogram.Domain.Enums
 {
-    public enum TransactionType
+    public enum TransactionType : byte
     {
+        None = 0,
         Deposit,
         Withdrawal,
         Transfer
