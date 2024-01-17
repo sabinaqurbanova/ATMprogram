@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ATMprogram.Domain.Entities;
+﻿using ATMprogram.Domain.Entities;
 
 namespace ATMprogram.UI
 {
-    public  class AppScreen
+    public class AppScreen
     {
+        internal const string cur = "AZN";
+
         internal static void Welcome()
         {
             Console.Clear();
@@ -21,7 +18,7 @@ namespace ATMprogram.UI
             Console.WriteLine("Please insert your ATM Card number:");
             Console.WriteLine("Note: Actual ATM machine will accept and validate a physical ATM card, read the card number and validate it.");
 
-           Utility.PressEnterToContinue();
+            Utility.PressEnterToContinue();
         }
 
         internal static UserAccount UserLoginForm()
@@ -42,7 +39,7 @@ namespace ATMprogram.UI
         internal static void PrintLockScreen()
         {
             Console.Clear();
-            Utility.PrintMessage("Your account is locked.Please go to the nearest branch to unlock your account. Thank you.",true);
+            Utility.PrintMessage("Your account is locked.Please go to the nearest branch to unlock your account. Thank you.", true);
             Utility.PressEnterToContinue();
             Environment.Exit(1);
         }
@@ -52,6 +49,7 @@ namespace ATMprogram.UI
             Console.WriteLine($"Welcome back, {fullName}");
             Utility.PressEnterToContinue();
         }
+
         internal static void DisplayAppMenu()
         {
             Console.Clear();
@@ -71,8 +69,6 @@ namespace ATMprogram.UI
             Utility.PrintDotAnimation();
             Console.Clear();
         }
-
-        internal const string cur = "AZN";
 
         internal static int SelectAmount()
         {
